@@ -30,6 +30,7 @@ Each component demonstrates elicitations in different contexts:
 
 ```bash
 npm install
+npm run build
 npm start
 ```
 
