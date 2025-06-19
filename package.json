@@ -1,0 +1,21 @@
+{
+  "name": "elicitations-mcp",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0",
+    "zod": "^3.25.67"
+  }
+}
