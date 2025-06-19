@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { isInitializeRequest } from "@modelcontextprotocol/sdk/types.js";
+import "dotenv/config";
 
 const app = express();
 app.use(express.json());
@@ -225,7 +226,7 @@ app.get("/mcp", handleSessionRequest);
 
 app.delete("/mcp", handleSessionRequest);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
