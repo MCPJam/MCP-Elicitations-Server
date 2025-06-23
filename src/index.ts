@@ -29,6 +29,7 @@ app.post("/mcp", async (req: Request, res: Response) => {
         delete transports[transport.sessionId];
       }
     };
+
     const server = new McpServer({
       name: "elicitation-server",
       version: "1.0.0",
@@ -193,12 +194,14 @@ app.post("/mcp", async (req: Request, res: Response) => {
     );
 
     await server.connect(transport);
+    console.log("MCP Server initialized and connected");
   } else {
     res.status(400).json({
       jsonrpc: "2.0",
       error: {
         code: -32000,
-        message: "Bad Request: No valid session ID provided",
+        message:
+          "Bad Request: No valid session ID provided and not an initialization request",
       },
       id: null,
     });

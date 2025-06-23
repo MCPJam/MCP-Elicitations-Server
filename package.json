@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,5 +19,8 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
   }
 }
